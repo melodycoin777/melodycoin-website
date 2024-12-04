@@ -1,97 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-</head>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MelodyCoin</title>
+    <title>MelodyCoin Roadmap</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
-        /* Reset some default styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Overall Body Style */
         body {
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
+            color: #333;
         }
-
-        /* Header Section */
         header {
-            background: linear-gradient(135deg, #0077b6, #00b4d8);
+            background: #0077b6;
             color: white;
-            padding: 20px;
             text-align: center;
+            padding: 40px 20px;
         }
-
         header h1 {
             font-size: 2.5rem;
-            font-weight: bold;
         }
-
-        /* Navigation Bar */
         nav {
             background: #023e8a;
-            padding: 10px;
             text-align: center;
+            padding: 10px;
         }
-
         nav a {
             color: white;
             text-decoration: none;
             margin: 0 15px;
-            font-size: 1.1rem;
-            font-weight: bold;
+            font-size: 1rem;
         }
-
         nav a:hover {
             text-decoration: underline;
         }
-
-        /* Main Section */
         section {
             padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
             text-align: center;
         }
-
         section h2 {
+            color: #023e8a;
             font-size: 2rem;
             margin-bottom: 20px;
-            color: #023e8a;
         }
-
-        section p {
-            font-size: 1.2rem;
+        .roadmap {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            text-align: left;
+        }
+        .roadmap-item {
+            background: #f8f9fa;
+            border-left: 5px solid #0077b6;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .roadmap-item h3 {
+            margin: 0 0 10px;
+            font-size: 1.5rem;
+            color: #0077b6;
+        }
+        .roadmap-item p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
             color: #555;
-            max-width: 800px;
-            margin: 0 auto;
         }
-
-        /* Footer */
         footer {
             background: #0077b6;
             color: white;
-            padding: 10px;
             text-align: center;
-            margin-top: 30px;
+            padding: 20px;
+            margin-top: 40px;
         }
-
         footer a {
             color: #00b4d8;
             text-decoration: none;
+            margin: 0 5px;
         }
-
         footer a:hover {
             text-decoration: underline;
         }
@@ -99,7 +92,7 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to MelodyCoin</h1>
+        <h1>MelodyCoin Roadmap</h1>
     </header>
     <nav>
         <a href="index.html">Home</a>
@@ -108,25 +101,52 @@
         <a href="roadmap.html">Roadmap</a>
     </nav>
     <section>
-        <h2>Empowering Music Education</h2>
-        <p>
-            MelodyCoin is a cryptocurrency dedicated to funding music programs and donating instruments to schools in need.
-            Together, we can empower the next generation of musicians.
-        </p>
+        <h2>Our Journey</h2>
+        <div class="roadmap">
+            <div class="roadmap-item">
+                <h3>Phase 1: Launch</h3>
+                <p>
+                    - Token creation and deployment. <br>
+                    - Establish Telegram and Twitter communities. <br>
+                    - Launch initial marketing campaigns and airdrops.
+                </p>
+            </div>
+            <div class="roadmap-item">
+                <h3>Phase 2: Growth</h3>
+                <p>
+                    - Partner with local schools in Tennessee for initial donations. <br>
+                    - Expand community engagement through social media. <br>
+                    - Develop an NFT marketplace for music-themed collectibles.
+                </p>
+            </div>
+            <div class="roadmap-item">
+                <h3>Phase 3: Expansion</h3>
+                <p>
+                    - Scale donations to schools nationwide. <br>
+                    - Collaborate with music organizations and influencers. <br>
+                    - List MelodyCoin on centralized exchanges.
+                </p>
+            </div>
+            <div class="roadmap-item">
+                <h3>Phase 4: Sustainability</h3>
+                <p>
+                    - Establish global music education partnerships. <br>
+                    - Launch a music education platform powered by MelodyCoin. <br>
+                    - Build a self-sustaining ecosystem for long-term impact.
+                </p>
+            </div>
+        </div>
     </section>
     <footer>
         <p>
             Follow us: 
-            <a href="https://x.com/melody_coin?s=09" target="_blank">Twitter</a> |
-            <a href="https://t.me/+HrzjmGi7AFI3MTE5" target="_blank">Telegram</a>
+            <a href="https://x.com/melody_coin?s=09" target="_blank"><i class="fab fa-twitter"></i> Twitter</a> |
+            <a href="https://t.me/+HrzjmGi7AFI3MTE5" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
         </p>
     </footer>
 </body>
 </html>
 
-<body>
-    <h1>About MelodyCoin</h1>
-    <p>MelodyCoin is a cryptocurrency dedicated to supporting music education.</p>
     <a href="index.html">Back to Home</a>
 </body>
 </html>
