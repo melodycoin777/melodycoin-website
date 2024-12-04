@@ -3,103 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MelodyCoin</title>
+    <title>MelodyCoin - Home</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background: #333; color: #fff; padding: 1em; text-align: center; }
-        section { padding: 2em; }
-        footer { background: #333; color: #fff; text-align: center; padding: 1em; }
-    </style>
-</head>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MelodyCoin</title>
-    <style>
-        /* Reset some default styles */
+        /* General Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        /* Overall Body Style */
         body {
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
+            color: #333;
         }
-
-        /* Header Section */
         header {
-            background: linear-gradient(135deg, #0077b6, #00b4d8);
+            background: linear-gradient(135deg, rgba(0, 119, 182, 0.8), rgba(0, 180, 216, 0.8)), 
+                        url('header-bg.jpg') no-repeat center center/cover;
             color: white;
-            padding: 20px;
             text-align: center;
+            padding: 60px 20px;
         }
-
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: bold;
+            animation: fadeIn 1.5s ease-in-out;
         }
-
-        /* Navigation Bar */
         nav {
             background: #023e8a;
             padding: 10px;
             text-align: center;
         }
-
         nav a {
             color: white;
             text-decoration: none;
             margin: 0 15px;
             font-size: 1.1rem;
-            font-weight: bold;
         }
-
         nav a:hover {
             text-decoration: underline;
         }
-
-        /* Main Section */
         section {
             padding: 40px 20px;
             text-align: center;
         }
-
         section h2 {
             font-size: 2rem;
-            margin-bottom: 20px;
             color: #023e8a;
         }
-
         section p {
-            font-size: 1.2rem;
-            color: #555;
             max-width: 800px;
             margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.6;
         }
-
-        /* Footer */
         footer {
             background: #0077b6;
             color: white;
-            padding: 10px;
             text-align: center;
-            margin-top: 30px;
+            padding: 20px 10px;
+            margin-top: 20px;
         }
-
         footer a {
             color: #00b4d8;
             text-decoration: none;
+            margin: 0 5px;
         }
-
         footer a:hover {
             text-decoration: underline;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -123,32 +107,9 @@
     <footer>
         <p>
             Follow us: 
-            <a href="https://x.com/melody_coin?s=09" target="_blank">Twitter</a> |
-            <a href="https://t.me/+HrzjmGi7AFI3MTE5" target="_blank">Telegram</a>
+            <a href="https://x.com/melody_coin?s=09" target="_blank"><i class="fab fa-twitter"></i> Twitter</a> |
+            <a href="https://t.me/+HrzjmGi7AFI3MTE5" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
         </p>
     </footer>
 </body>
 </html>
-
-<body>
-    <header>
-        <h1>Welcome to MelodyCoin</h1>
-    </header>
-    <section>
-        <h2>Empowering Music Education</h2>
-        <p>MelodyCoin is a cryptocurrency with a purpose: supporting music education by funding and donating instruments to underserved schools.</p>
-    </section>
-    <footer>
-        <p>Follow us: <a href="https://x.com/melody_coin?s=09" target="_blank">Twitter</a> | <a href="https://t.me/+HrzjmGi7AFI3MTE5" target="_blank">Telegram</a></p>
-    </footer>
-</body>
-</html>
-<header>
-    <h1>Welcome to MelodyCoin</h1>
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
-        <a href="tokenomics.html">Tokenomics</a> |
-        <a href="roadmap.html">Roadmap</a>
-    </nav>
-</header>
