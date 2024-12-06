@@ -69,13 +69,24 @@
             line-height: 1.8;
         }
 
-        iframe {
-            width: 100%;
-            height: 600px;
+        .purchase-btn {
+            display: inline-block;
+            margin-top: 2em;
+            padding: 0.8em 2em;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--primary-color);
+            background-color: var(--accent-color);
             border: none;
             border-radius: var(--border-radius);
+            text-decoration: none;
             box-shadow: var(--box-shadow);
-            margin-top: 2em;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .purchase-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
 
         footer {
@@ -116,11 +127,10 @@
         <ol>
             <li>Create a Solana-compatible wallet (e.g., Phantom or Solflare).</li>
             <li>Purchase Solana (SOL) from an exchange (e.g., Binance, Coinbase).</li>
-            <li>Visit the link below or use the integrated purchase widget.</li>
+            <li>Click the button below to visit the official purchase page.</li>
             <li>Connect your wallet and swap SOL for MelodyCoin.</li>
         </ol>
-        <p>Or use the integrated tool below:</p>
-        <iframe src="https://pump.fun/coin/5ieFds9KbbXF5RSLf33UE2sNNtTjAR4i2gTNXgXMpump"></iframe>
+        <a href="https://pump.fun/coin/5ieFds9KbbXF5RSLf33UE2sNNtTjAR4i2gTNXgXMpump" target="_blank" class="purchase-btn">Buy MelodyCoin</a>
     </section>
     <footer>
         <p>&copy; 2024 MelodyCoin. All rights reserved.</p>
