@@ -3,70 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MelodyCoin Tokenomics</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Tokenomics - MelodyCoin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #0D1B2A; /* Dark blue */
+            --secondary-color: #1B263B; /* Deep gray-blue */
+            --accent-color: #FFD700; /* Gold */
+            --text-color: #FFFFFF; /* White */
+            --background-color: var(--secondary-color);
+            --card-bg: #F9FAFC; /* Light gray */
+            --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            --border-radius: 12px;
+        }
+
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
             margin: 0;
-            color: #333;
+            padding: 0;
         }
+
         header {
-            background: #0077b6;
-            color: white;
+            background-color: var(--primary-color);
+            padding: 1em 2em;
             text-align: center;
-            padding: 40px;
+            color: white;
         }
+
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2em;
+            margin: 0;
         }
-        nav {
-            background: #023e8a;
-            text-align: center;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
+
+        header nav a {
+            margin: 0 1em;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 1rem;
+            color: white;
+            font-weight: 600;
+            font-size: 1em;
         }
-        nav a:hover {
-            text-decoration: underline;
+
+        header nav a:hover {
+            color: var(--accent-color);
         }
+
         section {
-            padding: 40px 20px;
             max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
+            margin: 3em auto;
+            padding: 2em;
+            background: #FFFFFF;
+            color: #333333;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
         }
-        table {
+
+        section h2 {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 1em;
+        }
+
+        .token-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            margin-top: 1.5em;
         }
-        table, th, td {
+
+        .token-table th, .token-table td {
+            text-align: left;
+            padding: 1em;
             border: 1px solid #ddd;
         }
-        th, td {
-            padding: 10px;
-            text-align: left;
+
+        .token-table th {
+            background-color: var(--primary-color);
+            color: var(--text-color);
         }
-        th {
-            background: #023e8a;
-            color: white;
+
+        .token-table tr:nth-child(even) {
+            background-color: var(--card-bg);
         }
+
         footer {
-            background: #0077b6;
-            color: white;
+            padding: 2em;
             text-align: center;
-            padding: 20px;
-            margin-top: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 0.9em;
         }
+
         footer a {
-            color: #00b4d8;
+            color: var(--accent-color);
             text-decoration: none;
+            font-weight: 600;
         }
+
         footer a:hover {
             text-decoration: underline;
         }
@@ -75,64 +108,73 @@
 <body>
     <header>
         <h1>MelodyCoin Tokenomics</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="roadmap.html">Roadmap</a>
+            <a href="purchase.html">How to Purchase</a>
+            <a href="contract.html">Contract</a>
+        </nav>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="tokenomics.html">Tokenomics</a>
-        <a href="roadmap.html">Roadmap</a>
-    </nav>
     <section>
-        <h2>Token Allocation</h2>
-        <table>
-            <tr>
-                <th>Category</th>
-                <th>Percentage</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>Founder Allocation</td>
-                <td>10%</td>
-                <td>Reserved for the project founder</td>
-            </tr>
-            <tr>
-                <td>Band Donation Fund</td>
-                <td>25%</td>
-                <td>Funds for donating instruments to schools</td>
-            </tr>
-            <tr>
-                <td>Community Rewards</td>
-                <td>20%</td>
-                <td>Rewards for token holders</td>
-            </tr>
-            <tr>
-                <td>Developer Fund</td>
-                <td>15%</td>
-                <td>To pay for ongoing development and innovation</td>
-            </tr>
-            <tr>
-                <td>Liquidity Pool</td>
-                <td>15%</td>
-                <td>Stabilizes the token for trading</td>
-            </tr>
-            <tr>
-                <td>Marketing & Growth</td>
-                <td>10%</td>
-                <td>Promotions, partnerships, and outreach</td>
-            </tr>
-            <tr>
-                <td>Reserve Fund</td>
-                <td>5%</td>
-                <td>Emergency fund for unforeseen expenses</td>
-            </tr>
+        <h2>Token Distribution</h2>
+        <p>
+            MelodyCoin's tokenomics have been carefully designed to ensure fairness, sustainability, and growth. Below is a breakdown of how the token supply is allocated:
+        </p>
+        <table class="token-table">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Percentage</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Founder Allocation</td>
+                    <td>5%</td>
+                    <td>Reserved for the project founder.</td>
+                </tr>
+                <tr>
+                    <td>Band Donation Fund</td>
+                    <td>30%</td>
+                    <td>Funds for donating instruments to schools.</td>
+                </tr>
+                <tr>
+                    <td>Community Rewards</td>
+                    <td>20%</td>
+                    <td>Rewards for token holders.</td>
+                </tr>
+                <tr>
+                    <td>Developer Fund</td>
+                    <td>15%</td>
+                    <td>To pay for ongoing development and innovation.</td>
+                </tr>
+                <tr>
+                    <td>Liquidity Pool</td>
+                    <td>15%</td>
+                    <td>Stabilizes the token for trading.</td>
+                </tr>
+                <tr>
+                    <td>Marketing & Growth</td>
+                    <td>10%</td>
+                    <td>Promotions, partnerships, and outreach.</td>
+                </tr>
+                <tr>
+                    <td>Reserve Fund</td>
+                    <td>5%</td>
+                    <td>Emergency fund for unforeseen expenses.</td>
+                </tr>
+            </tbody>
         </table>
     </section>
     <footer>
+        <p>&copy; 2024 MelodyCoin. All rights reserved.</p>
         <p>
-            Follow us: 
-            <a href="https://x.com/melody_coin?s=09" target="_blank">Twitter</a> |
-            <a href="https://t.me/+HrzjmGi7AFI3MTE5" target="_blank">Telegram</a>
+            <a href="https://twitter.com/your-twitter-link" target="_blank">Twitter</a> | 
+            <a href="https://t.me/your-telegram-link" target="_blank">Telegram</a>
         </p>
     </footer>
 </body>
 </html>
+
