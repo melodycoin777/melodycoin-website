@@ -4,86 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MelodyCoin Roadmap</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #0D1B2A; /* Dark blue */
+            --secondary-color: #1B263B; /* Deep gray-blue */
+            --accent-color: #FFD700; /* Gold */
+            --text-color: #FFFFFF; /* White */
+            --background-color: var(--secondary-color);
+            --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            --border-radius: 12px;
+        }
+
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
             margin: 0;
-            color: #333;
+            padding: 0;
         }
+
         header {
-            background: #0077b6;
-            color: white;
+            background-color: var(--primary-color);
+            padding: 1em 2em;
             text-align: center;
-            padding: 40px 20px;
+            color: white;
         }
+
         header h1 {
-            font-size: 2.5rem;
-        }
-        nav {
-            background: #023e8a;
-            text-align: center;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1rem;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        section h2 {
-            color: #023e8a;
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        .roadmap {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-            text-align: left;
-        }
-        .roadmap-item {
-            background: #f8f9fa;
-            border-left: 5px solid #0077b6;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .roadmap-item h3 {
-            margin: 0 0 10px;
-            font-size: 1.5rem;
-            color: #0077b6;
-        }
-        .roadmap-item p {
+            font-size: 2em;
             margin: 0;
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #555;
         }
-        footer {
-            background: #0077b6;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-        footer a {
-            color: #00b4d8;
+
+        header nav a {
+            margin: 0 1em;
             text-decoration: none;
-            margin: 0 5px;
+            color: white;
+            font-weight: 600;
+            font-size: 1em;
         }
+
+        header nav a:hover {
+            color: var(--accent-color);
+        }
+
+        section {
+            max-width: 900px;
+            margin: 3em auto;
+            padding: 2em;
+            background: #FFFFFF;
+            color: #333333;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 1em;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        }
+
+        .phase {
+            position: relative;
+            padding-left: 2.5em;
+            border-left: 2px solid var(--primary-color);
+        }
+
+        .phase::before {
+            content: '';
+            position: absolute;
+            left: -0.9em;
+            top: 0;
+            width: 1.5em;
+            height: 1.5em;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            box-shadow: var(--box-shadow);
+        }
+
+        .phase h3 {
+            font-size: 1.8em;
+            color: var(--primary-color);
+            margin-bottom: 0.5em;
+        }
+
+        .phase p {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        footer {
+            padding: 2em;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
         footer a:hover {
             text-decoration: underline;
         }
@@ -92,55 +121,56 @@
 <body>
     <header>
         <h1>MelodyCoin Roadmap</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="tokenomics.html">Tokenomics</a>
+            <a href="purchase.html">How to Purchase</a>
+            <a href="contract.html">Contract</a>
+        </nav>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="tokenomics.html">Tokenomics</a>
-        <a href="roadmap.html">Roadmap</a>
-    </nav>
     <section>
-        <h2>Our Journey</h2>
-        <div class="roadmap">
-            <div class="roadmap-item">
-                <h3>Phase 1: Launch</h3>
+        <h2>Our Roadmap</h2>
+        <div class="timeline">
+            <div class="phase">
+                <h3>Phase 1: Launch (0–3 Months)</h3>
                 <p>
-                    - Token creation and deployment. <br>
-                    - Establish Telegram and Twitter communities. <br>
-                    - Launch initial marketing campaigns and airdrops.
+                    • Token creation and DEX listing.<br>
+                    • Establish Twitter and Telegram communities.<br>
+                    • Initial marketing campaigns and airdrops.
                 </p>
             </div>
-            <div class="roadmap-item">
-                <h3>Phase 2: Growth</h3>
+            <div class="phase">
+                <h3>Phase 2: Growth (3–6 Months)</h3>
                 <p>
-                    - Partner with local schools in Tennessee for initial donations. <br>
-                    - Expand community engagement through social media. <br>
-                    - Develop an NFT marketplace for music-themed collectibles.
+                    • Identify and support the first schools in Tennessee.<br>
+                    • Pilot NFT marketplace for music-themed digital assets.<br>
+                    • Build partnerships with music organizations and influencers.
                 </p>
             </div>
-            <div class="roadmap-item">
-                <h3>Phase 3: Expansion</h3>
+            <div class="phase">
+                <h3>Phase 3: Expansion (6–12 Months)</h3>
                 <p>
-                    - Scale donations to schools nationwide. <br>
-                    - Collaborate with music organizations and influencers. <br>
-                    - List MelodyCoin on centralized exchanges.
+                    • Expand donations to schools beyond Tennessee.<br>
+                    • List on centralized exchanges for broader adoption.<br>
+                    • Host virtual and live events to promote MelodyCoin’s mission.
                 </p>
             </div>
-            <div class="roadmap-item">
-                <h3>Phase 4: Sustainability</h3>
+            <div class="phase">
+                <h3>Phase 4: Sustainability (1–3 Years)</h3>
                 <p>
-                    - Establish global music education partnerships. <br>
-                    - Launch a music education platform powered by MelodyCoin. <br>
-                    - Build a self-sustaining ecosystem for long-term impact.
+                    • Implement a global donation program.<br>
+                    • Launch a music education platform powered by MelodyCoin.<br>
+                    • Build a self-sustaining ecosystem combining rewards, partnerships, and community growth.
                 </p>
             </div>
         </div>
     </section>
     <footer>
+        <p>&copy; 2024 MelodyCoin. All rights reserved.</p>
         <p>
-            Follow us: 
-            <a href="https://x.com/melody_coin?s=09" target="_blank"><i class="fab fa-twitter"></i> Twitter</a> |
-            <a href="https://t.me/+HrzjmGi7AFI3MTE5" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
+            <a href="https://twitter.com/your-twitter-link" target="_blank">Twitter</a> | 
+            <a href="https://t.me/your-telegram-link" target="_blank">Telegram</a>
         </p>
     </footer>
 </body>
