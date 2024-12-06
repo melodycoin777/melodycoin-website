@@ -9,89 +9,132 @@
         :root {
             --primary-color: #1D3557; /* Deep blue */
             --secondary-color: #457B9D; /* Muted blue */
-            --background-color: #F9FAFB; /* Light gray */
-            --dark-gray: #2A2A2A; /* Dark gray */
-            --light-gray: #ECEFF4; /* Light neutral */
-            --text-color: #FFFFFF; /* White for text on dark backgrounds */
             --accent-color: #FFD700; /* Gold for highlights */
+            --background-color: #F3F4F6; /* Light gray */
+            --card-bg: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+            --text-color: #333333;
+            --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            --border-radius: 12px;
         }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            margin: 0;
             font-family: 'Inter', sans-serif;
-            background-color: var(--background-color);
-            color: var(--dark-gray);
+            background: linear-gradient(to bottom right, var(--background-color), var(--secondary-color));
+            color: var(--text-color);
+            overflow-x: hidden;
         }
+
         header {
-            background-color: var(--primary-color);
-            padding: 2em 1em;
-            text-align: center;
-            color: var(--text-color);
-        }
-        header img {
-            max-width: 120px;
-            margin-bottom: 1em;
-        }
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-        nav {
-            margin: 1em 0;
-        }
-        nav a {
-            color: var(--text-color);
-            text-decoration: none;
-            margin: 0 1.5em;
-            font-size: 1.2em;
-            font-weight: 600;
-        }
-        .hero {
-            text-align: center;
-            padding: 3em 1em;
-            background: var(--secondary-color);
-            color: var(--text-color);
-        }
-        .hero h2 {
-            font-size: 2.8em;
-            font-weight: 700;
-        }
-        .hero p {
-            font-size: 1.2em;
-            margin-top: 1em;
-        }
-        .features {
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            padding: 2em 1em;
-            gap: 2em;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 2em;
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: var(--box-shadow);
         }
-        .feature {
-            flex: 1 1 calc(33% - 2em);
-            min-width: 300px;
-            background-color: var(--light-gray);
-            border-radius: 8px;
-            padding: 1.5em;
+
+        header img {
+            max-height: 50px;
+        }
+
+        header nav a {
+            margin: 0 1em;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 1em;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 4em 1em;
+            color: white;
+            background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
         }
-        .feature h3 {
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .hero p {
             font-size: 1.5em;
             margin-bottom: 1em;
-            color: var(--primary-color);
         }
-        footer {
+
+        .hero button {
+            padding: 0.8em 2em;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--primary-color);
+            background-color: var(--accent-color);
+            border: none;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .hero button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2em;
+            padding: 4em 2em;
+            background: var(--background-color);
+        }
+
+        .feature {
+            background: var(--card-bg);
+            padding: 2em;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
             text-align: center;
-            padding: 1.5em 1em;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature h3 {
+            font-size: 1.8em;
+            color: var(--primary-color);
+            margin-bottom: 1em;
+        }
+
+        footer {
+            padding: 2em;
+            text-align: center;
             background-color: var(--primary-color);
-            color: var(--text-color);
+            color: white;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src=Screenshot 2024-12-03 121953.jpg alt="MelodyCoin Logo">
-      <h1>MelodyCoin</h1>
+        <img src="your-logo-path-here.webp" alt="MelodyCoin Logo">
         <nav>
             <a href="#about">About</a>
             <a href="#features">Features</a>
@@ -99,25 +142,29 @@
         </nav>
     </header>
     <div class="hero">
-        <h2>The Future of Crypto and Music</h2>
-        <p>MelodyCoin harmonizes blockchain and melody. Be part of the next big thing.</p>
+        <div>
+            <h1>MelodyCoin</h1>
+            <p>The Harmony of Music and Blockchain</p>
+            <button>Get Started</button>
+        </div>
     </div>
-    <section id="features" class="features">
+    <section class="features">
         <div class="feature">
             <h3>Secure</h3>
-            <p>State-of-the-art encryption for every transaction.</p>
+            <p>State-of-the-art encryption to protect your assets.</p>
         </div>
         <div class="feature">
             <h3>Fast</h3>
-            <p>Lightning-speed transactions powered by Solana blockchain.</p>
+            <p>Instant transactions powered by Solana blockchain.</p>
         </div>
         <div class="feature">
             <h3>Eco-Friendly</h3>
-            <p>Energy-efficient and sustainable crypto solutions.</p>
+            <p>Low energy consumption for a sustainable future.</p>
         </div>
     </section>
     <footer>
-        <p>&copy; 2024 MelodyCoin. All rights reserved.</p>
+        <p>&copy; 2024 MelodyCoin. All rights reserved. <a href="#contact">Contact Us</a></p>
     </footer>
 </body>
 </html>
+
