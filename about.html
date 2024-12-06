@@ -1,50 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <a href="index.html">Back to Home</a>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About MelodyCoin</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #0D1B2A; /* Dark blue */
+            --secondary-color: #1B263B; /* Deep gray-blue */
+            --accent-color: #FFD700; /* Gold */
+            --text-color: #FFFFFF; /* White */
+            --background-color: var(--secondary-color);
+            --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            --border-radius: 12px;
+        }
+
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
             margin: 0;
-            color: #333;
+            padding: 0;
         }
-        header, footer {
-            background: #023e8a;
-            color: white;
+
+        header {
+            background-color: var(--primary-color);
+            padding: 1em 2em;
             text-align: center;
-            padding: 20px;
-        }
-        nav {
-            text-align: center;
-            padding: 10px;
-            background: #0077b6;
-        }
-        nav a {
             color: white;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        header nav a {
+            margin: 0 1em;
             text-decoration: none;
-            margin: 0 10px;
-            font-size: 1rem;
+            color: white;
+            font-weight: 600;
+            font-size: 1em;
         }
-        nav a:hover {
-            text-decoration: underline;
+
+        header nav a:hover {
+            color: var(--accent-color);
         }
+
         section {
-            padding: 40px;
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 900px;
+            margin: 3em auto;
+            padding: 2em;
+            background: #FFFFFF;
+            color: #333333;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 1em;
+        }
+
+        section p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 1.5em;
+        }
+
+        .mission {
+            margin-top: 2em;
+        }
+
+        footer {
+            padding: 2em;
             text-align: center;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 0.9em;
         }
+
         footer a {
-            color: #00b4d8;
+            color: var(--accent-color);
             text-decoration: none;
-            margin: 0 5px;
+            font-weight: 600;
         }
+
         footer a:hover {
             text-decoration: underline;
         }
@@ -53,25 +96,39 @@
 <body>
     <header>
         <h1>About MelodyCoin</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="roadmap.html">Roadmap</a>
+            <a href="tokenomics.html">Tokenomics</a>
+            <a href="purchase.html">How to Purchase</a>
+            <a href="contract.html">Contract</a>
+        </nav>
     </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="tokenomics.html">Tokenomics</a>
-        <a href="roadmap.html">Roadmap</a>
-    </nav>
     <section>
-        <h2>Our Mission</h2>
+        <h2>What is MelodyCoin?</h2>
         <p>
-            MelodyCoin is created by a tech-loving high school band director to empower music education through cryptocurrency innovation. 
-            Every transaction helps fund instruments and programs for underserved schools.
+            MelodyCoin is the first cryptocurrency designed to bring the power of blockchain technology to support music education. Our mission is to empower band programs across the United States by providing a transparent, decentralized crowdfunding platform that connects music enthusiasts, educators, and supporters.
         </p>
+        <p>
+            MelodyCoin offers a unique opportunity for donors to directly support band programs while leveraging the speed, security, and efficiency of the Solana blockchain. Through MelodyCoin, band directors can create campaigns to fund equipment, travel expenses, uniforms, and more.
+        </p>
+        <h2>Our Mission</h2>
+        <p class="mission">
+            MelodyCoin was created by a high school band director who understands the challenges music programs face due to limited funding. Our mission is to revolutionize music education funding by using cryptocurrency to bridge the gap. Starting in the Southeastern United States, MelodyCoin aims to provide much-needed resources to band programs, ensuring every student has the opportunity to participate in music education.
+        </p>
+        <h2>Why MelodyCoin?</h2>
+        <ul>
+            <li><strong>Empowering Music Education:</strong> Support band programs with direct, transparent contributions.</li>
+            <li><strong>Fast Transactions:</strong> Lightning-fast processing powered by Solana blockchain.</li>
+            <li><strong>Secure:</strong> Built on advanced blockchain technology to ensure safety and reliability.</li>
+            <li><strong>Community-Driven:</strong> Harness the power of a global music-loving community to make a difference.</li>
+        </ul>
     </section>
     <footer>
+        <p>&copy; 2024 MelodyCoin. All rights reserved.</p>
         <p>
-            Follow us: 
-            <a href="https://x.com/melody_coin?s=09" target="_blank"><i class="fab fa-twitter"></i> Twitter</a> |
-            <a href="https://t.me/+HrzjmGi7AFI3MTE5" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
+            <a href="https://twitter.com/your-twitter-link" target="_blank">Twitter</a> | 
+            <a href="https://t.me/your-telegram-link" target="_blank">Telegram</a>
         </p>
     </footer>
 </body>
