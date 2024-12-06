@@ -7,23 +7,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #4A90E2; /* Softer, modern blue */
-            --secondary-color: #FFD700; /* Accent gold */
-            --background-color: #F9FAFB; /* Light gray for contrast */
-            --text-color: #333333; /* Dark gray for easy readability */
-            --button-color: #4CAF50; /* Subtle green for actions */
+            --primary-color: #1D3557; /* Deep blue */
+            --secondary-color: #457B9D; /* Muted blue */
+            --background-color: #F9FAFB; /* Light gray */
+            --dark-gray: #2A2A2A; /* Dark gray */
+            --light-gray: #ECEFF4; /* Light neutral */
+            --text-color: #FFFFFF; /* White for text on dark backgrounds */
+            --accent-color: #FFD700; /* Gold for highlights */
         }
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
             background-color: var(--background-color);
-            color: var(--text-color);
+            color: var(--dark-gray);
         }
         header {
             background-color: var(--primary-color);
-            padding: 1.5em 1em;
+            padding: 2em 1em;
             text-align: center;
-            color: white;
+            color: var(--text-color);
+        }
+        header img {
+            max-width: 120px;
+            margin-bottom: 1em;
         }
         header h1 {
             font-size: 2.5em;
@@ -33,7 +39,7 @@
             margin: 1em 0;
         }
         nav a {
-            color: white;
+            color: var(--text-color);
             text-decoration: none;
             margin: 0 1.5em;
             font-size: 1.2em;
@@ -42,8 +48,8 @@
         .hero {
             text-align: center;
             padding: 3em 1em;
-            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
-            color: white;
+            background: var(--secondary-color);
+            color: var(--text-color);
         }
         .hero h2 {
             font-size: 2.8em;
@@ -63,8 +69,7 @@
         .feature {
             flex: 1 1 calc(33% - 2em);
             min-width: 300px;
-            background-color: white;
-            border: 1px solid #ddd;
+            background-color: var(--light-gray);
             border-radius: 8px;
             padding: 1.5em;
             text-align: center;
@@ -79,12 +84,13 @@
             text-align: center;
             padding: 1.5em 1em;
             background-color: var(--primary-color);
-            color: white;
+            color: var(--text-color);
         }
     </style>
 </head>
 <body>
     <header>
+        <img src="your-logo-path-here.webp" alt="MelodyCoin Logo">
         <h1>MelodyCoin</h1>
         <nav>
             <a href="#about">About</a>
